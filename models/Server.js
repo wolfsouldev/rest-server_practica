@@ -19,6 +19,8 @@ class Server{
         //Cors
         this.app.use(cors())
 
+        this.app.use(express.json())
+
         //Carpeta publica 
         this.app.use(express.static('public'));
     }
