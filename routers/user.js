@@ -8,7 +8,7 @@ router.get('/',getUser);
 
 router.post('/',postUser);
 
-router.put('/',putUser);
+router.put('/:userID',putUser);
 
 router.delete('/',deletUser);
 
