@@ -1,7 +1,7 @@
 const {Router}= require('express'); 
 const { getUser, postUser, putUser, deletUser, pathcUser } = require('../controllers/user');
 
-
+//Rutas
 const router=Router();
 
 router.get('/',getUser);
