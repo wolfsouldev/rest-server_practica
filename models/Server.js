@@ -1,5 +1,6 @@
 const express =require('express');
-
+const cors=require('cors');
+const  route  = require('../routers/user');
 
 class Server{
 
@@ -15,15 +16,16 @@ class Server{
     }
 
     middlewares(){
+        //Cors
+        this.app.use(cors())
 
+        //Carpeta publica 
         this.app.use(express.static('public'));
     }
 
     rutas(){
 
-        this.app.get('/api',(req,res)=>{
-            res.json({name:'wolfsloul'})
-        })
+       this.app.use('/api/user',route)
 
 
     }
