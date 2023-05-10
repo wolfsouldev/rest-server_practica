@@ -21,8 +21,8 @@ class Server{
 
     rutas(){
 
-        this.app.get('/',(req,res)=>{
-            res.send('Hola mundo ')
+        this.app.get('/api',(req,res)=>{
+            res.json({name:'wolfsloul'})
         })
 
 
